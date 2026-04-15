@@ -1,3 +1,19 @@
+let array1=[10,20,30,40,50];
+let array2=["Hey","Hi","Hello"];
+
+// concat and join
+console.log(array1.concat(array2));
+
+
+console.log(array1.join("."));
+console.log(array1.join(""));
+console.log(array1.join("@"));
+console.log(typeof array2.join(" "));
+
+//searching and sorting
+array1.sort();
+console.log(array1);
+console.log(array1.sort((a,b)=>b-a));
 // ---------------------- ARRAYS ----------------------
 
 let arr01 = [10, 20, 30, 60, 50];
@@ -82,4 +98,3 @@ console.log(array1.indexOf(30));
 
 
 let array3=[[10,20,30],[40,50,60],[70,80,90]];
-
