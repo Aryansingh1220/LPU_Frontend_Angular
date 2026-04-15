@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms in HTML</title>
+</head>
+
+<body>
+  <form action="#" method="">
+
+    <label>Name</label>
+    <input type="text" name="name" placeholder="Enter your name" required><br><br>
+
+    <label>Age</label>
+    <input type="number" name="age" placeholder="Enter your age" required><br><br>
+    <legend>Gender</legend>
+    <input type="radio" name="gender" value="male" required> Male
+    <input type="radio" name="gender" value="female"> Female
+    <input type="radio" name="gender" value="other"> Other
+    <br>
+
+    <legend>Subjects</legend>
+    <input type="checkbox" name="subject[]" value="c"> C
+    <input type="checkbox" name="subject[]" value="cpp"> C++
+    <input type="checkbox" name="subject[]" value="java"> Java
+    <br>
+    <label>Password</label>
+    <input type="password" name="password" required><br><br>
+    <input type="file"><br><br>
+    <input type="date">Date <br>
+    <input type="time">Time <br>
+    <input type="datetime-local"> Date and Time <br><br>
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Enter your email" required><br><br>
+    <input type="color">Pick a color <br><br>
+    <input type="range">Range <br><br>
+
+    <button type="submit">Submit</button>
+
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+{
+  "user":[
+    {
+    "name": "John Doe",
+    "email": "johndoe@example.com"
+  },
+  {
+    "name": "Jane Doe",
+    "email": "janedoe@example.com"
+  }
+  ],
+  "laptops":[
+    {
+      "brand": "Dell",
+      "model": "XPS 13",
+      "price": 85000
+    },
+    {
+      "brand": "Apple",
+      "model": "MacBook Pro",
+      "price": 129900
+    },
+    {
+      "brand": "Lenovo",
+      "model": "ThinkPad X1",
+      "price": 109900
+    }
+  ]
+
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Game</title>
+</head>
+
+<body>
+  Toss:
+  <button onclick="startToss('head')">Head</button>
+  <button onclick="startToss('tail')">Tail</button>
+
+  <p id="tossResult"></p>
+
+  <div id="choiceBox" style="display:none;">
+    <p>Choose:</p>
+    <button onclick="chooseBat()">Bat</button>
+    <button onclick="chooseBowl()">Bowl</button>
+  </div>
+
+  <div>
+    You:
+    <input type="number" id="input" min="1" max="6" oninput="processInput()">
+
+    <br><br>
+
+    Computer:
+    <p id="botInput"></p>
+
+    Umpire:
+    <p id="umpire"></p>
+
+    Total Runs:
+    <p id="totalRuns"></p>
+
+    Previous Balls:
+    <p id="previousBalls"></p>
+
+    Runs Required to win:
+    <p id="runrequired"></p>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
