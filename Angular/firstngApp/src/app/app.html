@@ -1,0 +1,77 @@
+<h1>My first Angular App</h1>
+<h2>{{title}}</h2>
+<button (click)="changeTitle()">Click to change title</button>
+
+<!-- <div class="user-details">
+  <h4>Single User Detail: </h4>
+  <p>Name: {{user.name}}</p>
+  <p>Email: {{user.email}}</p>
+  <p>Age: {{user.age}}</p>
+  <p>Address: {{user.address}}</p>
+  <p>Phone Numbers: {{user.phoneNo}}</p> 
+
+  <h4>All Users: </h4>
+</div> -->
+
+<!-- @for(u of users ; track u.name){
+<div class="user-details">
+  <p>Name: {{u.name}}</p>
+  <p>Email: {{u.email}}</p>
+  <p>Age: {{u.age}}</p>
+  <p>Address: {{u.address}}</p>
+  <p>Phone Numbers: {{u.phoneNo}}</p>
+  <p>Gender: {{u.gender}}</p>
+  <p>Picture: <img [src]="u.pic" alt="{{u.name}}" width="100"></p>
+  <input type="text" disabled="{{u.edit}}">
+  <input type="text" [disabled]="u.edit"> -->
+
+<!-- @if(u.gender === 'Male'){
+  <p>You are eligible to go faraway.</p>
+  }
+  @else{
+  <p>You are not eligible to go faraway.</p>
+  } -->
+
+<!-- @switch (u.gender) {
+  @case ('Male')
+  {<p>You are eligible to go faraway.</p>}
+  @case ('Female')
+  {<p>You are not eligible to go faraway.</p>}
+
+  }
+</div>
+} -->
+<br>
+Select card view/List view:
+<button (click)="card()">Card</button>
+<button (click)="list()">List</button>
+
+@if (viewType === 'card') {
+<div class="card-container">
+  @for (u of users; track u.name) {
+  <app-user-details [name]="u.name" [age]="u.age" [address]="u.address" [gender]="u.gender">
+  </app-user-details>
+  }
+</div>
+}
+@else {
+<div class="list-container">
+  @for (u of users; track u.name) {
+  <div class="list-item">
+    <p><b>Name:</b> {{u.name}}</p>
+    <p><b>Age:</b> {{u.age}}</p>
+    <p><b>Address:</b> {{u.address}}</p>
+    <p><b>Gender:</b> {{u.gender}}</p>
+  </div>
+  }
+</div>
+}
+
+
+
+<!-- @for (u of users; track u.name) {
+<app-user-details [name]="u.name" [age]="u.age" [address]="u.address" [gender]="u.gender">
+</app-user-details>
+} -->
+
+<router-outlet />
