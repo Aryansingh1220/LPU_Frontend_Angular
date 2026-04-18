@@ -1,7 +1,10 @@
 <div class="user-details">
-  <div>Name:{{name}}</div>
+
+  <div>Name:<input type="text" value="{{name}}" [readOnly]="! editMode"></div>
   <div>Age:{{age}}</div>
   <div>Address:{{address}}</div>
   <div>Gender:{{gender}}</div>
-
+  <img [src]="pic" alt="">
+  <button (click)="informParent()">Click to delete</button>
+  <button (click)="toggleEdit()">Edit</button>
 </div>

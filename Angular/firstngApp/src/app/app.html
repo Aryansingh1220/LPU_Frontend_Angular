@@ -1,6 +1,6 @@
-<h1>My first Angular App</h1>
+<!-- <h1>My first Angular App</h1>
 <h2>{{title}}</h2>
-<button (click)="changeTitle()">Click to change title</button>
+<button (click)="changeTitle()">Click to change title</button> -->
 
 <!-- <div class="user-details">
   <h4>Single User Detail: </h4>
@@ -42,7 +42,7 @@
 </div>
 } -->
 <br>
-Select card view/List view:
+<!-- Select card view/List view:
 <button (click)="card()">Card</button>
 <button (click)="list()">List</button>
 
@@ -58,20 +58,29 @@ Select card view/List view:
 <div class="list-container">
   @for (u of users; track u.name) {
   <div class="list-item">
-    <p><b>Name:</b> {{u.name}}</p>
-    <p><b>Age:</b> {{u.age}}</p>
-    <p><b>Address:</b> {{u.address}}</p>
-    <p><b>Gender:</b> {{u.gender}}</p>
+    <table border="1px" margin="40px" [cellPadding]="10">
+      <th style="background-color: aqua; "><b>Name:</b></th>
+      <td>{{u.name}}</td><br>
+      <th style="background-color: beige;"><b>Age:</b> </th>
+      <td>{{u.age}}</td><br>
+      <th style="background-color: aliceblue;"><b>Address:</b></th>
+      <td> {{u.address}}</td><br>
+      <th style="background-color: wheat;"><b>Gender:</b></th>
+      <td>{{u.gender}}</td>
+    </table>
   </div>
   }
 </div>
-}
-
-
-
-<!-- @for (u of users; track u.name) {
-<app-user-details [name]="u.name" [age]="u.age" [address]="u.address" [gender]="u.gender">
-</app-user-details>
 } -->
+<h1>My first angular app</h1>
+<h2>{{ title }}</h2>
+<h4></h4>
+Enter the title:
+<input type="text" [(ngModel)]="title" />
 
+@for (u of users; track u.name) {
+<app-user-details [id]="u.id" [name]="u.name" [age]="u.age" [address]="u.address" [gender]="u.gender" [pic]="u.pic"
+  (deleteEvent)="parentAction($event)" (updateEvent)="updateUser($event)">
+</app-user-details>
+}
 <router-outlet />
